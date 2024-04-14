@@ -64,6 +64,12 @@ CREATE TABLE Room_Booking (
     duration INTERVAL NOT NULL
 );
 
+-- Equipment Table
+CREATE TABLE Equipment (
+                           equipmentID SERIAL PRIMARY KEY,
+                           name VARCHAR(255)
+);
+
 -- Equipment Maintenance Table
 CREATE TABLE Equipment_Maintenance (
     maintenanceID SERIAL PRIMARY KEY,
@@ -100,12 +106,6 @@ CREATE TABLE Payment (
     paymentMethod VARCHAR(50),
     paymentDate DATE NOT NULL,
     FOREIGN KEY (billID) REFERENCES Billing(billID)
-);
-
--- Equipment Table
-CREATE TABLE Equipment (
-    equipmentID SERIAL PRIMARY KEY,
-    name VARCHAR(255)
 );
 
 -- Rooms Table
