@@ -55,15 +55,15 @@ public class AdminService {
         }
     }
 
-    public void updateClassSchedule(int classId, LocalDateTime classTime, int roomId) {
-        String SQL = "UPDATE CLASS_SCHEDULE SET classTime = ?, roomId = ? WHERE classId = ?";
+    public void updateClassSchedule(int classScheduledID, LocalDateTime classTime, int roomId) {
+        String SQL = "UPDATE CLASS_SCHEDULE SET classTime = ?, roomId = ? WHERE classScheduledID = ?";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(SQL)) {
 
             pstmt.setTimestamp(1, Timestamp.valueOf(classTime));
             pstmt.setInt(2, roomId);
-            pstmt.setInt(3, classId);
+            pstmt.setInt(3, classScheduledID);
             int affectedRows = pstmt.executeUpdate();
 
             if (affectedRows > 0) {
@@ -77,9 +77,9 @@ public class AdminService {
         }
     }
 
-    public void processPayment(int billId, String paymentMethod, LocalDate paymentDate) {
-        String SQL_Bill = "UPDATE BILLING SET isPaid = true WHERE billId = ?";
-        String SQL_Payment = "INSERT INTO PAYMENT(billId, paymentMethod, paymentDate) VALUES(?, ?, ?)";
+    public void processPayment(int billId, int amount, String paymentMethod, LocalDate paymentDate) {
+        String SQL_Bill = "UPDATE BILLING SET amount = 50 WHERE billId = ?";
+        String SQL_Payment = "INSERT INTO PAYMENT(paymentId, paymentMethod, paymentDate) VALUES(?, ?, ?)";
 
         try (Connection conn = connect();
              PreparedStatement pstmtBill = conn.prepareStatement(SQL_Bill);

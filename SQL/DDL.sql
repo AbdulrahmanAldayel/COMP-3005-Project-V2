@@ -61,7 +61,7 @@ CREATE TABLE Admins (
 CREATE TABLE Room_Booking (
     bookingID SERIAL PRIMARY KEY,
     bookingTime TIMESTAMP NOT NULL,
-    duration INTERVAL NOT NULL
+    duration INT NOT NULL
 );
 
 -- Equipment Table
