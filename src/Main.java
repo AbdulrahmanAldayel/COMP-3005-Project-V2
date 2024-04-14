@@ -19,5 +19,7 @@ public class Main {
         trainerService.viewMemberProfile("John");
 
         System.out.println("\n----------------------------------\n");
+
+        // Call other methods to use system
     }
 }
