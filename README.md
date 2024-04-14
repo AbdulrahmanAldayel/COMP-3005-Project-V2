@@ -5,9 +5,8 @@ Student:
 Abdulrahman Aldayel 101142760
 
 In this Repo:
-1. Project Report
-2. ER Diagram
-3. Relational Schema
-4. SQL Files
-5. Source Code
-6. Video Demo: ...
+1. ER Diagram
+2. Relational Schema
+3. SQL Files
+4. Source Code
+5. Video Demo: ...
