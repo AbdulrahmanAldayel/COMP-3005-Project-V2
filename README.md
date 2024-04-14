@@ -9,4 +9,4 @@ In this Repo:
 2. Relational Schema
 3. SQL Files
 4. Source Code
-5. Video Demo: ...
+5. Video Demo: https://youtu.be/tNjDUhaXpOM
